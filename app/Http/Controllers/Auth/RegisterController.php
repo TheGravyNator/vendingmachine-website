@@ -69,14 +69,6 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
         $userId = $user->id;
-        Order::create([
-          'user_id' => $userId,
-          'slot_1_orders' => 0,
-          'slot_2_orders' => 0,
-          'slot_3_orders' => 0,
-          'slot_4_orders' => 0,
-          'slot_5_orders' => 0
-        ]);
         return $user;
     }
 }
